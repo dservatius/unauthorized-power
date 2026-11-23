@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unauthorized Power: A Reading Guide</title>
 
 <!-- What Facebook shows in the preview card -->
@@ -12,10 +13,27 @@
 <!-- og:url must be THIS page's own address, not the Facebook post -->
 <meta property="og:url" content="https://dservatius.github.io/unauthorized-power/">
 
-<!-- Send readers on to the reading guide (script only, so Facebook reads this page, not the guide) -->
-<script>location.replace("https://www.facebook.com/share/p/1CeGctaTyi/");</script>
+<style>
+  body { margin: 0; background: #0b0a08; color: #e8d9b5; font-family: Georgia, serif;
+         display: flex; flex-direction: column; align-items: center; justify-content: center;
+         min-height: 100vh; padding: 16px; box-sizing: border-box; text-align: center; }
+  img { max-width: 100%; width: 900px; height: auto; border-radius: 6px; }
+  a.btn { display: inline-block; margin-top: 24px; padding: 14px 28px; border-radius: 6px;
+          background: #c9a35a; color: #0b0a08; font: bold 18px Helvetica, Arial, sans-serif;
+          text-decoration: none; }
+</style>
+
+<!-- Forward human readers to the guide. Facebook's link reader is skipped,
+     so it stays on this page and reads the card above. -->
+<script>
+  var guide = "https://www.facebook.com/share/p/1CeGctaTyi/";
+  if (!/facebookexternalhit|facebot|facebookcatalog/i.test(navigator.userAgent)) {
+    location.replace(guide);
+  }
+</script>
 </head>
 <body>
-<p><a href="https://www.facebook.com/share/p/1CeGctaTyi/">Continue to the reading guide</a></p>
+  <img src="banner.jpg" alt="The Unauthorized Power Series">
+  <a class="btn" href="https://www.facebook.com/share/p/1CeGctaTyi/">Open the reading guide</a>
 </body>
 </html>
